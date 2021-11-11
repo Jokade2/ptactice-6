@@ -1,0 +1,43 @@
+Задание 1:
+def print_till_zero(n):
+    if n == 0:
+        return
+    print(n)
+    return print_till_zero(n-1)
+
+n = int(input())
+print (print_till_zero(n))
+
+Задание 2:
+def is_palindrome(s):
+    if len(s) == 0:
+        return "Слово является полидромом"
+    if(s[0]==s[-1]):
+        return is_palindrome(s[1:-1])
+    return "Слово не является полидромом"
+s = input()
+print (is_palindrome(s))
+
+Задание 3:
+def power(a,b):
+    if b==0:
+        return 1
+    elif (b % 2 != 0):
+        return power(a,b-1)*a
+    else:
+        k = power(a,b//2)
+        return k*k
+
+a = int(input())
+b = int(input())
+
+print(power(a,b))
+
+Задание 5:
+def fibbonachi(n):
+    if n in (1,2):
+        return 1
+    return fibbonachi(n-1)+fibbonachi(n-2)
+    
+n = int(input())
+print(fibbonachi(n))
